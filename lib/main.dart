@@ -11,8 +11,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo', 
-      home: Material(child: Center(child: Text('Hello Flutter'),),),
+      title: 'Flutter Demo',
+      home: Material(
+        child: Center(
+          child: Text('Hello Flutter'),
+        ),
+      ),
     );
   }
 }
