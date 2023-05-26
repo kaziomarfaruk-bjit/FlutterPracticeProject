@@ -2,9 +2,11 @@
 // ignore_for_file: use_key_in_widget_constructors
 // ignore_for_file: must_be_immutable
 // ignore_for_file: unused_local_variable
+// ignore_for_file: unused_import
 
 import 'package:flutter/material.dart';
 import 'package:fluttercatalog/pages/login_page.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'pages/home_page.dart';
 
 void main() {
@@ -13,14 +15,16 @@ void main() {
 
 class MyApp extends StatelessWidget {
   var days = 10;
-
   @override
   Widget build(BuildContext context) {
     var total = bringVegetables(thala: true, taka: 5);
     return MaterialApp(
       title: 'Flutter Demo',
       themeMode: ThemeMode.light,
-      theme: ThemeData(primarySwatch: Colors.deepPurple),
+      theme: ThemeData(
+        primarySwatch: Colors.deepPurple,
+        //fontFamily: GoogleFonts.lato().fontFamily
+      ),
       darkTheme: ThemeData(brightness: Brightness.dark),
       initialRoute: "/login",
       routes: {
