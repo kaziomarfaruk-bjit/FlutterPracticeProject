@@ -10,7 +10,8 @@ import 'package:flutter/material.dart';
 class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Material(
+    return SingleChildScrollView(
+        child: Material(
       color: Colors.white,
       child: Center(
           child: Column(
@@ -29,39 +30,33 @@ class LoginPage extends StatelessWidget {
           SizedBox(
             height: 20,
           ),
-          TextFormField(
-            decoration: InputDecoration(
-                hintText: "Enter username", labelText: "Username"),
-          ),
-          TextFormField(
-            obscureText: true,
-            decoration: InputDecoration(
-                hintText: "Enter password", labelText: "Password"),
-          ),
-          SizedBox(
-            height: 20,
-          ),
-          ElevatedButton(
-              child: Text("Login"),
-              style: TextButton.styleFrom(foregroundColor: Colors.white),
-              onPressed: () {
-                print("Hello pressed button!");
-              }),
+          Padding(
+            padding: EdgeInsets.symmetric(vertical: 16, horizontal: 32),
+            child: Column(
+              children: [
+                TextFormField(
+                  decoration: InputDecoration(
+                      hintText: "Enter username", labelText: "Username"),
+                ),
+                TextFormField(
+                  obscureText: true,
+                  decoration: InputDecoration(
+                      hintText: "Enter password", labelText: "Password"),
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                ElevatedButton(
+                    child: Text("Login"),
+                    style: TextButton.styleFrom(foregroundColor: Colors.white),
+                    onPressed: () {
+                      print("Hello pressed button!");
+                    }),
+              ],
+            ),
+          )
         ],
       )),
-    );
+    ));
   }
 }
-
-
-/*
-
-Text(
-          "login page",
-          style: TextStyle(
-              fontSize: 32,
-              color: Colors.lightBlue,
-              fontWeight: FontWeight.bold),
-        ),
-
-*/
