@@ -6,6 +6,7 @@
 // ignore_for_file: sort_child_properties_last
 
 import 'package:flutter/material.dart';
+import 'package:fluttercatalog/utils/routes.dart';
 
 class LoginPage extends StatelessWidget {
   @override
@@ -19,6 +20,7 @@ class LoginPage extends StatelessWidget {
           Image.asset(
             "assets/images/img_login.png",
             fit: BoxFit.cover,
+            height: 300,
           ),
           SizedBox(
             height: 20,
@@ -48,9 +50,12 @@ class LoginPage extends StatelessWidget {
                 ),
                 ElevatedButton(
                     child: Text("Login"),
-                    style: TextButton.styleFrom(foregroundColor: Colors.white),
+                    style: TextButton.styleFrom(
+                        minimumSize: Size(150, 40),
+                        foregroundColor: Colors.white),
                     onPressed: () {
                       print("Hello pressed button!");
+                      Navigator.pushNamed(context, MyRoutes.homeRoute);
                     }),
               ],
             ),
