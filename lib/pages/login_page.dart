@@ -72,7 +72,6 @@ class _LoginPageState extends State<LoginPage> {
                       if (value != null && value.isEmpty) {
                         return "Username cannot be empty!";
                       }
-
                       return null;
                     },
                   ),

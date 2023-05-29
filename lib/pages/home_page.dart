@@ -3,6 +3,7 @@
 // ignore_for_file: must_be_immutable
 
 import 'package:flutter/material.dart';
+import 'package:fluttercatalog/widgets/drawer.dart';
 
 class HomePage extends StatelessWidget {
   var days = 30;
@@ -15,7 +16,7 @@ class HomePage extends StatelessWidget {
       body: Center(
         child: Text('Home Flutter in $days days'),
       ),
-      drawer: Drawer(),
+      drawer: MyDrawer(),
     );
   }
 }
