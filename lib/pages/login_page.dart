@@ -61,34 +61,42 @@ class _LoginPageState extends State<LoginPage> {
                 SizedBox(
                   height: 20,
                 ),
-                InkWell(
-                  onTap: () async {
-                    setState(() {
-                      changeButton = true;
-                    });
-                    await Future.delayed(Duration(seconds: 1));
-                    Navigator.pushNamed(context, MyRoutes.homeRoute);
-                  },
-                  child: AnimatedContainer(
-                    duration: Duration(seconds: 1),
-                    width: changeButton ? 40 : 150,
-                    height: 40,
-                    alignment: Alignment.center,
-                    child: changeButton
-                        ? Icon(Icons.done, color: Colors.white)
-                        : Text(
-                            "Login",
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold,
-                                fontSize: 14),
-                          ),
-                    decoration: BoxDecoration(
-                        color: Colors.deepPurple,
-                        /*shape:
-                          changeButton ? BoxShape.circle : BoxShape.rectangle,*/
-                        borderRadius:
-                            BorderRadius.circular(changeButton ? 40 : 8)),
+                Material(
+                  color: Colors.deepPurple,
+                  borderRadius: BorderRadius.circular(changeButton ? 40 : 8),
+                  child: InkWell(
+                    splashColor: Colors.red,
+                    onTap: () async {
+                      setState(() {
+                        changeButton = true;
+                      });
+                      await Future.delayed(Duration(seconds: 1));
+                      await Navigator.pushNamed(context, MyRoutes.homeRoute);
+                      setState(() {
+                        changeButton = false;
+                      });
+                    },
+                    child: AnimatedContainer(
+                      duration: Duration(seconds: 1),
+                      width: changeButton ? 40 : 150,
+                      height: 40,
+                      alignment: Alignment.center,
+                      child: changeButton
+                          ? Icon(Icons.done, color: Colors.white)
+                          : Text(
+                              "Login",
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 14),
+                            ),
+                      /* decoration: BoxDecoration(
+                          color: Colors.deepPurple,
+                          /*shape:
+                            changeButton ? BoxShape.circle : BoxShape.rectangle,*/
+                          borderRadius:
+                              BorderRadius.circular(changeButton ? 40 : 8)), */
+                    ),
                   ),
                 )
 
