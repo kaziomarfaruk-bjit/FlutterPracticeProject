@@ -13,8 +13,14 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: Text("Catalog App"),
       ),
-      body: Center(
-        child: Text('Home Flutter in $days days'),
+      body: Column(
+        children: [
+          Container(
+            height: 100,
+            width: 100,
+            color: Colors.red,
+          )
+        ],
       ),
       drawer: MyDrawer(),
     );
