@@ -7,6 +7,7 @@
 import 'package:flutter/material.dart';
 import 'package:fluttercatalog/pages/login_page.dart';
 import 'package:fluttercatalog/utils/routes.dart';
+import 'package:fluttercatalog/utils/themes.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'pages/home_page.dart';
 
@@ -21,14 +22,11 @@ class MyApp extends StatelessWidget {
     var total = bringVegetables(thala: true, taka: 5);
     return MaterialApp(
       title: 'Flutter Demo',
-      themeMode: ThemeMode.light,
-      theme: ThemeData(
-        primarySwatch: Colors.deepPurple,
-        //fontFamily: GoogleFonts.lato().fontFamily
-      ),
-      darkTheme: ThemeData(brightness: Brightness.dark),
-      initialRoute: MyRoutes.homeRoute,
+      themeMode: ThemeMode.dark,
+      theme: MyTheme.lightTheme(context),
+      darkTheme: MyTheme.darkTheme(context),
       debugShowCheckedModeBanner: false,
+      initialRoute: MyRoutes.loginPage,
       routes: {
         "/": (context) => HomePage(),
         MyRoutes.homeRoute: (context) => HomePage(),
