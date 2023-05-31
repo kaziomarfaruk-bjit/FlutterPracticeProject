@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
     var total = bringVegetables(thala: true, taka: 5);
     return MaterialApp(
       title: 'Flutter Demo',
-      themeMode: ThemeMode.dark,
+      themeMode: ThemeMode.light,
       theme: MyTheme.lightTheme(context),
       darkTheme: MyTheme.darkTheme(context),
       debugShowCheckedModeBanner: false,

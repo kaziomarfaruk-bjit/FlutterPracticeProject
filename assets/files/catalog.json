@@ -1,0 +1,53 @@
+{
+    "products": [
+        {
+            "id" : 1,
+            "name" : "iPhone 12 Pro",
+            "desc" : "Apple iPhone 12th generation",
+            "price" : 999,
+            "color" : "#33505a",
+            "image" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRISJ6msIu4AU9_M9ZnJVQVFmfuhfyJjEtbUm3ZK11_8IV9TV25-1uM5wHjiFNwKy99w0mR5Hk&usqp=CAc"
+        },
+        {
+            "id" : 2,
+            "name" : "Codepur002",
+            "desc" : "Codepur002",
+            "price" : 130,
+            "color" : "#33505a",
+            "image" : "https://images.unsplash.com/flagged/photo-1557427161-4701a0fa2f42?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D&w=1000&q=80"
+        },
+        {
+            "id" : 3,
+            "name" : "Codepur003",
+            "desc" : "Codepur003",
+            "price" : 140,
+            "color" : "#33505a",
+            "image" : "https://images.unsplash.com/flagged/photo-1557427161-4701a0fa2f42?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D&w=1000&q=80"
+        },
+        {
+            "id" : 4,
+            "name" : "Codepur004",
+            "desc" : "Codepur004",
+            "price" : 140,
+            "color" : "#33505a",
+            "image" : "https://images.unsplash.com/flagged/photo-1557427161-4701a0fa2f42?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D&w=1000&q=80"
+        },
+        {
+            "id" : 5,
+            "name" : "Codepur005",
+            "desc" : "Codepur005",
+            "price" : 140,
+            "color" : "#33505a",
+            "image" : "https://images.unsplash.com/flagged/photo-1557427161-4701a0fa2f42?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D&w=1000&q=80"
+        },
+        {
+            "id" : 6,
+            "name" : "Codepur006",
+            "desc" : "Codepur006",
+            "price" : 140,
+            "color" : "#33505a",
+            "image" : "https://images.unsplash.com/flagged/photo-1557427161-4701a0fa2f42?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D&w=1000&q=80"
+        }
+
+    ]
+}
