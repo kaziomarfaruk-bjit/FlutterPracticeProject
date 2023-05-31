@@ -12,6 +12,7 @@ class HomePage extends StatelessWidget {
   var days = 30;
   @override
   Widget build(BuildContext context) {
+    // final dummyList = List.generate(50, (index) => CatalogModel.items[0]);
     return Scaffold(
       appBar: AppBar(
         title: Text("Catalog App"),

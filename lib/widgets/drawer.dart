@@ -25,13 +25,13 @@ class MyDrawer extends StatelessWidget {
                   margin: EdgeInsets.zero,
                   accountName: Text("Kazi"),
                   accountEmail: Text("kaz@kk.gg"),
-                  currentAccountPicture: Image.asset(
+                  currentAccountPicture: /*Image.asset(
                     "assets/images/img_login.png",
                     fit: BoxFit.cover,
                     height: 80,
                     width: 80,
-                  ),
-                  // CircleAvatar(backgroundImage: NetworkImage(imageURL)),
+                  ),*/
+                  CircleAvatar(backgroundImage: NetworkImage(imageURL)),
                 )),
             ListTile(
                 title: Text(
