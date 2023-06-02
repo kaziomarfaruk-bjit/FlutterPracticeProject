@@ -43,12 +43,36 @@ class _HomePageState extends State<HomePage> {
       ),
       body: CatalogModel.items.isNotEmpty
           ? GridView.builder(
-              gridDelegate:
-                  SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3),
-                            itemCount: CatalogModel.items.length,
+              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 3, mainAxisSpacing: 16, crossAxisSpacing: 16),
+              itemCount: CatalogModel.items.length,
               itemBuilder: (context, index) {
-  final items = CatalogModel.items[index];
-                return GridTile(child: Image.network(items.image));
+                final items = CatalogModel.items[index];
+                return Card(
+                    clipBehavior: Clip.antiAlias,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10)),
+                    child: GridTile(
+                      header: Container(
+                        padding: EdgeInsets.all(12),
+                        decoration: BoxDecoration(color: Colors.deepPurple),
+                        child: Text(
+                          items.name,
+                          style: TextStyle(
+                              color: Colors.white, fontWeight: FontWeight.bold),
+                        ),
+                      ),
+                      footer: Container(
+                        padding: EdgeInsets.all(12),
+                        decoration: BoxDecoration(color: Colors.black),
+                        child: Text(
+                          items.price.toString(),
+                          style: TextStyle(
+                              color: Colors.white, fontWeight: FontWeight.bold),
+                        ),
+                      ),
+                      child: Image.network(items.image),
+                    ));
               })
           : Center(
               child: CircularProgressIndicator(),
