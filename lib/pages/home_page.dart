@@ -42,11 +42,14 @@ class _HomePageState extends State<HomePage> {
         title: Text("Catalog App"),
       ),
       body: CatalogModel.items.isNotEmpty
-          ? ListView.builder(
-              itemCount: CatalogModel.items.length,
-              itemBuilder: (context, index) => ItemWidget(
-                    item: CatalogModel.items[index],
-                  ))
+          ? GridView.builder(
+              gridDelegate:
+                  SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3),
+                            itemCount: CatalogModel.items.length,
+              itemBuilder: (context, index) {
+  final items = CatalogModel.items[index];
+                return GridTile(child: Image.network(items.image));
+              })
           : Center(
               child: CircularProgressIndicator(),
             ),
